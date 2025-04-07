@@ -40,8 +40,8 @@ success
 
 ## 从源码入手
 正所谓“不入虎穴，焉得虎子”。<br>
-我克隆了 Ollama 的官方仓库：
-🔗 https://github.com/ollama/ollama
+我克隆了 Ollama 的官方仓库：<br>
+🔗 https://github.com/ollama/ollama<br>
 我使用VS Code打开代码仓库，以 `"pulling manifest"` 为关键词搜索，迅速定位到关键函数。<br>
 `images.go` 文件中的 `PullModel` 函数：
 ```go
