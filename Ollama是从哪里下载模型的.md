@@ -5,8 +5,8 @@
 ![deepseek-r1](https://i.imgur.com/3vE09YW.png)
 
 ## 前言
-本地运行开源大模型，如今最推荐的软件，非 **Ollama** 莫属。 
-经过几个月的实际使用体验，我对它的评价是：**简洁高效、使用愉悦**。
+本地运行开源大模型，如今最推荐的软件，非 **Ollama** 莫属。<br>
+经过几个月的实际使用体验，我对它的评价是：**简洁高效、使用愉悦**。<br>
 
 一句命令即可运行模型：
 ```bash
@@ -39,8 +39,8 @@ success
 于是我决定从源码中寻找答案。
 
 ## 从源码入手
-
-正所谓“不入虎穴，焉得虎子”。我克隆并使用VS Code打开了 Ollama 的官方仓库：
+正所谓“不入虎穴，焉得虎子”。
+我克隆并使用VS Code打开了 Ollama 的官方仓库：
 🔗 https://github.com/ollama/ollama
 Ollama 使用 Go 语言编写，我以 `"pulling manifest"` 为关键词搜索，迅速定位到关键函数：
 `images.go` 文件中的 `PullModel` 函数：
