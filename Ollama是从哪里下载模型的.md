@@ -243,5 +243,5 @@ https://registry.ollama.ai/v2/library/<MODEL>/manifests/<TAG>
 ```
 https://registry.ollama.ai/v2/library/<MODEL>/blobs/<SHA256>
 ```
-以 `deepseek-r1` 为例，我们完整地解析了其模型的构成、清单结构及每个部分的实际内容。
+以 `deepseek-r1` 为例，我们完整地解析了其模型的构成、清单结构及每个部分的实际内容。<br>
 相信这些信息能帮你更好地理解和使用 `Ollama`，也为日后构建私有模型仓库或调试模型加载过程提供了参考。
