@@ -2,6 +2,8 @@
 > 作者：猫叔  
 > 日期：2025/4/1  
 
+![deepseek-r1](https://i.imgur.com/3vE09YW.png)
+
 ## 前言
 本地运行开源大模型，如今最推荐的软件，非 **Ollama** 莫属。 
 经过几个月的实际使用体验，我对它的评价是：**简洁高效、使用愉悦**。
@@ -244,4 +246,3 @@ https://registry.ollama.ai/v2/library/<MODEL>/blobs/<SHA256>
 ```
 以 `deepseek-r1` 为例，我们完整地解析了其模型的构成、清单结构及每个部分的实际内容。
 相信这些信息能帮你更好地理解和使用 `Ollama`，也为日后构建私有模型仓库或调试模型加载过程提供了参考。
-![deepseek-r1](https://i.imgur.com/3vE09YW.png)
