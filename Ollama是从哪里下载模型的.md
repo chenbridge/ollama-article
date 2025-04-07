@@ -42,7 +42,7 @@ success
 正所谓“不入虎穴，焉得虎子”。<br>
 我克隆了 Ollama 的官方仓库：<br>
 🔗 https://github.com/ollama/ollama<br>
-我使用VS Code打开代码仓库，以 `"pulling manifest"` 为关键词搜索，迅速定位到关键函数。<br>
+使用VS Code打开代码仓库，以 `"pulling manifest"` 为关键词搜索，迅速定位到关键函数。<br>
 `images.go` 文件中的 `PullModel` 函数：
 ```go
 func PullModel(ctx context.Context, name string, regOpts *registryOptions, fn func(api.ProgressResponse)) error {
@@ -98,7 +98,7 @@ https://registry.ollama.ai/v2/library/<MODEL>/manifests/<TAG>
 - MODEL: 模型ID，例如`deepseek-r1`
 - TAG: 标签，一般指参数规模(例如: 7b, 8b)，默认是 `latest`
 
-例如 `deepseek-r1`：
+例如 `deepseek-r1`的模型清单请求链接是：<br>
 https://registry.ollama.ai/v2/library/deepseek-r1/manifests/latest
 
 ## 模型清单
@@ -243,5 +243,6 @@ https://registry.ollama.ai/v2/library/<MODEL>/manifests/<TAG>
 ```
 https://registry.ollama.ai/v2/library/<MODEL>/blobs/<SHA256>
 ```
-以 `deepseek-r1` 为例，我们完整地解析了其模型的构成、清单结构及每个部分的实际内容。<br>
+<br>
+以 `deepseek-r1` 为例，我们完整地解析了模型清单的结构及每个部分的实际内容。<br>
 相信这些信息能帮你更好地理解和使用 `Ollama`，也为日后构建私有模型仓库或调试模型加载过程提供了参考。
