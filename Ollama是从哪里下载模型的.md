@@ -234,7 +234,7 @@ https://registry.ollama.ai/v2/library/deepseek-r1/blobs/sha256:f4d24e9138dd46033
 ```
 
 ## 总结
-本文通过分析 Ollama 的源码，深入了解了其下载模型的机制和具体链接格式：
+本文通过分析 `Ollama` 的源码，深入了解了其下载模型的机制和具体链接格式：
 - 模型清单（manifest）请求地址：
 ```
 https://registry.ollama.ai/v2/library/<MODEL>/manifests/<TAG>
