@@ -5,8 +5,8 @@
 ![deepseek-r1](https://i.imgur.com/3vE09YW.png)
 
 ## 前言
-本地运行开源大模型，如今最推荐的软件，非 **Ollama** 莫属。<br>
-经过几个月的实际使用体验，我对它的评价是：**简洁高效、使用愉悦**。<br>
+本地运行开源大模型，如今最推荐的软件，非 **Ollama** 莫属。</br>
+经过几个月的实际使用体验，我对它的评价是：**简洁高效、使用愉悦**。</br>
 
 一句命令即可运行模型：
 ```bash
@@ -39,10 +39,10 @@ success
 于是我决定从源码中寻找答案。
 
 ## 从源码入手
-正所谓“不入虎穴，焉得虎子”。<br>
-我克隆了 Ollama 的官方仓库：<br>
-🔗 https://github.com/ollama/ollama<br>
-使用VS Code打开代码仓库，以 `"pulling manifest"` 为关键词搜索，迅速定位到关键函数。<br>
+正所谓“不入虎穴，焉得虎子”。</br>
+我克隆了 Ollama 的官方仓库：</br>
+🔗 https://github.com/ollama/ollama</br>
+使用VS Code打开代码仓库，以 `"pulling manifest"` 为关键词搜索，迅速定位到关键函数。</br>
 `images.go` 文件中的 `PullModel` 函数：
 ```go
 func PullModel(ctx context.Context, name string, regOpts *registryOptions, fn func(api.ProgressResponse)) error {
@@ -98,7 +98,7 @@ https://registry.ollama.ai/v2/library/<MODEL>/manifests/<TAG>
 - MODEL: 模型ID，例如`deepseek-r1`
 - TAG: 标签，一般指参数规模(例如: 7b, 8b)，默认是 `latest`
 
-例如 `deepseek-r1`的模型清单请求链接是：<br>
+例如 `deepseek-r1`的模型清单请求链接是：</br>
 https://registry.ollama.ai/v2/library/deepseek-r1/manifests/latest
 
 ## 模型清单
@@ -194,11 +194,11 @@ curl -s -L https://registry.ollama.ai/v2/library/deepseek-r1/blobs/sha256:40fb84
 ## 分层数据
 
 ### 1. `image.model` 
-模型二进制文件，文件很大(4683073184)，下载链接：<br>
+模型二进制文件，文件很大(4683073184)，下载链接：</br>
 https://registry.ollama.ai/v2/library/deepseek-r1/blobs/sha256:96c415656d377afbff962f6cdb2394ab092ccbcbaab4b82525bc4ca800fe8a49
 
 ### 2. `image.template` 
-用于控制提示词格式的模板，下载链接：<br>
+用于控制提示词格式的模板，下载链接：</br>
 https://registry.ollama.ai/v2/library/deepseek-r1/blobs/sha256:369ca498f347f710d068cbb38bf0b8692dd3fa30f30ca2ff755e211c94768150
 
 实际内容：
@@ -214,11 +214,11 @@ https://registry.ollama.ai/v2/library/deepseek-r1/blobs/sha256:369ca498f347f710d
 ```
 
 ### 3. `image.license` 
-模型的许可证文件，下载链接：<br>
+模型的许可证文件，下载链接：</br>
 https://registry.ollama.ai/v2/library/deepseek-r1/blobs/sha256:6e4c38e1172f42fdbff13edf9a7a017679fb82b0fde415a3e8b3c31c6ed4a4e4
 
 ### 4. `image.params` 
-模型的推理参数定义，下载链接：<br>
+模型的推理参数定义，下载链接：</br>
 https://registry.ollama.ai/v2/library/deepseek-r1/blobs/sha256:f4d24e9138dd4603380add165d2b0d970bef471fac194b436ebd50e6147c6588
 
 实际内容：
@@ -243,6 +243,6 @@ https://registry.ollama.ai/v2/library/<MODEL>/manifests/<TAG>
 ```
 https://registry.ollama.ai/v2/library/<MODEL>/blobs/<SHA256>
 ```
-<br>
-以 `deepseek-r1` 为例，我们完整地解析了模型清单的结构及每个部分的实际内容。<br>
+</br>
+以 `deepseek-r1` 为例，我们完整地解析了模型清单的结构及每个部分的实际内容。</br>
 相信这些信息能帮你更好地理解和使用 `Ollama`，也为日后构建私有模型仓库或调试模型加载过程提供了参考。
